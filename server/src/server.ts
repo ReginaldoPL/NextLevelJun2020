@@ -1,9 +1,13 @@
 import express from 'express';
+import cors from 'cors';
 import path from 'path';
 import routes from './route';
 
 const app = express();
 
+app.use(cors(
+    //{xx.com.br}
+));
 app.use(express.json());
 app.use(routes)
 
